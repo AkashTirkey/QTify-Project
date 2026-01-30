@@ -19,10 +19,10 @@ export default function Section({ title, data, filterSource, type }) {
     if (filterSource) {
       filterSource().then((response) => {
         const { data } = response;
-        setFilters([...filters, ...data]);
+        setFilters([{key:"all", label:"All"},...filters, ...data]);
       });
     }
-  }, [filters,filterSource]);
+  }, [filterSource]);
 
   const showFilters = filters.length > 1; //true
   const cardsToRender = data.filter((card) =>
