@@ -3,7 +3,6 @@ import Hero from "./components/Hero/Hero";
 import HomePage from "./pages/HomePage/HomePage";
 import Navbar from "./components/Navbar/Navbar";
 // import StyledEngineProvider from "@mui/material/StyledEngineProvider";
-import { StyledEngineProvider } from "@mui/material/styles";
 import { Outlet } from "react-router-dom";
 import {
   fetchFilters,
@@ -42,10 +41,10 @@ function App() {
 
   return (
     <>
-      <StyledEngineProvider injectFirst>
-        <Navbar searchData={[...topAlbums, ...newAlbums]} />
-        <Outlet context={{ data: { topAlbums, newAlbums, songs, genres } }} />
-      </StyledEngineProvider>
+      {/* <StyledEngineProvider injectFirst> */}
+      <Navbar searchData={[...topAlbums, ...newAlbums]} />
+      <Outlet context={{ data: { topAlbums, newAlbums, songs, genres } }} />
+      {/* </StyledEngineProvider> */}
     </>
   );
 }

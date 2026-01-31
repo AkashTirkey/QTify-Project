@@ -7,7 +7,7 @@
 // import CarouselLeftNavigation from "./CarouselLeftNavigation/CarouselLeftNavigation";
 // import CarouselRightNavigation from "./CarouselRightNavigation/CarouselRightNavigation";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import styles from "./Carousel.module.css";
@@ -22,7 +22,7 @@ const Controls = ({ data }) => {
 
   useEffect(() => {
     swiper.slideTo(0);
-  }, [data]);
+  }, [swiper]);
 
   return <></>;
 };

@@ -20,7 +20,7 @@ export default function HomePage() {
         <Section
           title="Songs"
           data={songs}
-          filterSource={fetchFilters}
+          filterSource={fetchFilters}  
           type="song"
         />
       </div>
